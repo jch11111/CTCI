@@ -1,0 +1,4 @@
+C:\_ctci\linkedLists\3_delete_middle\deleteMiddle\deleteMiddle\bin\Debug\deleteMiddle.exe
+C:\_ctci\linkedLists\3_delete_middle\deleteMiddle\deleteMiddle\bin\Debug\deleteMiddle.pdb
+C:\_ctci\linkedLists\3_delete_middle\deleteMiddle\deleteMiddle\obj\x86\Debug\deleteMiddle.exe
+C:\_ctci\linkedLists\3_delete_middle\deleteMiddle\deleteMiddle\obj\x86\Debug\deleteMiddle.pdb
