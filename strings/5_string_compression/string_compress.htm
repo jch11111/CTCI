@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <textarea id="inputString" cols="100" rows="10"></textarea><br /><br />
+    <button>compress</button><br /><br />
+    <span id="compressed" style="border: 1px solid #ddd"></span>
+
+<script language="javascript">
+$("button").on("click", function () {
+    commpressString();
+});
+
+$('#inputString').keypress(function (e) {
+    var keycode = (e.keyCode ? e.keyCode : e.which);
+    if (keycode === 13) {
+        e.preventDefault();
+        commpressString();
+    }
+});
+
+var commpressString = function () {
+    var inputString = $('#inputString').val();
+
+    var charCount = 1;
+    var lastChar = inputString.charAt(0);
+    var compressedString = "";
+
+    for (var i = 1; i < inputString.length; i++) {
+        var nextChar = inputString.charAt(i)
+        if (nextChar !== lastChar) {
+            compressedString += lastChar + charCount;
+            lastChar = nextChar;
+            charCount = 1;
+        } else {
+            charCount++;
+        }
+    }
+    compressedString += lastChar + charCount;
+
+    if (compressedString.length >= inputString.length) compressedString = inputString;
+    $('#compressed').text(compressedString);
+
+}
+</script>
+
+</body>
+</html>
